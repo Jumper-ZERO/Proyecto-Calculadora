@@ -2,7 +2,7 @@
 
 ...
 
-## Taller #1: figurad geometricas
+## Taller #2: porcentajes y descuentos
 
 - Primer paso: definir las fórmulas
 - Segundo paso: inplementar las fórmulas en javascript
