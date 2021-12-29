@@ -94,19 +94,19 @@ function calcularArearCuadrado(){
     const value = input.value;
     const area = areaCuadrado(value);
     alert(area);
-}
+};
 function calcularPerimetroCirculo(){
     const input = document.getElementById("InputCirculo")
     const value = input.value;
     const perimetro = perimetroCirculo(value);
     alert(perimetro);
-}
+};
 function calcularAreaCirculo(){
     const input = document.getElementById("InputCirculo");
     const value = input.value;
     const area = areaCirculo(value);
     alert(area);
-}
+};
 function calcularPerimetroTriangulo(){
     const input = document.getElementById("Lado1");
     const uno = input.value;
@@ -119,7 +119,7 @@ function calcularPerimetroTriangulo(){
     const value3 = parseInt(tres);
     const perimetro = perimetroTriangulo(value, value2, value3);
     alert(perimetro);
-}
+};
 function calcularAreaTriangulo(){
     const input = document.getElementById("Lado1");
     const value = input.value;
@@ -129,4 +129,26 @@ function calcularAreaTriangulo(){
     const baseT = parseInt(value2);
     const area = areaTriangulo(alturaT, baseT);
     alert(area);
-}
+};
+
+function AlturaIsoseles(lados, base){
+    const a = lados * lados;
+    const b = (base * base) / 4;
+    const h = a - b;
+    return Math.sqrt(h);
+};
+
+function calcularAlturaIsoseles(){ 
+    const izquierdo = document.getElementById("lado1");
+    const derecho = document.getElementById("lado2");
+    const base = document.getElementById("base");
+    const lado1 = izquierdo.value;
+    const lado2 = derecho.value;
+    const lado3 = base.value;
+    if (lado1 === lado2){
+        const altura = AlturaIsoseles(lado1, lado3);
+        alert(altura);
+    } else {
+        alert("los lados no son iguales");
+    }
+};
