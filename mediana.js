@@ -1,7 +1,8 @@
 let mediana;
 
 function Conversor(){
-    const NumeroSinOrdenar = document.getElementById("Numeros").value.replace(/ /g, "").split(','); //Split() es para crear un array con el separador de , 
+    /*Split() es para crear un array con el separador de , y un replace() para eliminar espacios*/
+    const NumeroSinOrdenar = document.getElementById("Numeros").value.replace(/ /g, "").split(',');
     const Numero = NumeroSinOrdenar.sort(); //Esto es para ordenar el Array
     const resultado = document.getElementById("Resultado"); //Para poner un parrafo con el resultado
     const mitadNumeros = parseInt(Numero.length / 2);//Saber donde es la mitad
