@@ -2,12 +2,12 @@ const lista1 = [1,2,3,1,2,3,4,2,2,2,1];
 const arrayVacio = [];
 const lista1Count = {};
 
-function sacarModa(){
-    const NumerosDesordenados = document.getElementById("InputModa").value.replace(/ /g, "").split(',');
-    const NumerosOrdenada = NumerosDesordenados.sort();
+// function sacarModa(){
+//     const NumerosDesordenados = document.getElementById("InputModa").value.replace(/ /g, "").split(',');
+//     const NumerosOrdenada = NumerosDesordenados.sort();
 
-    console.log(NumerosOrdenada);
-};
+//     console.log(NumerosOrdenada);
+// };
 
 lista1.map(
     function(elemento){
