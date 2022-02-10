@@ -3,18 +3,12 @@ const salariosCol = colombia.map(({salary}) => salary)
 
 const salariosColSorted = salariosCol.sort((a, b) => a - b);
 
-// Funciones para LLamar
+// Funciones para LLamar "helpers" ---------------------------------
 function esPar(numerito) {
     return (numerito % 2 === 0);
 }
 
-function calcularMediaAritmetica(lista) {
-    const sumaLista = lista.reduce((a = 0, b) => a + b);
-        const promedioLista = sumaLista / lista.length; 
-        return promedioLista; 
-}
-
-//Proceso
+//Proceso ---------------------------------
 function medianaSalarios(lista) {
     const mitad = parseInt(lista.length / 2); //super necesario
 
@@ -29,6 +23,30 @@ function medianaSalarios(lista) {
         return personitaMitad;
     }
 }
-console.log(
-    medianaSalarios(salariosColSorted) // la funcion y la lista
-)
+
+//Mediana General ---------------------------------
+
+function calcularMediaAritmetica(lista) {
+    const sumaLista = lista.reduce((a = 0, b) => a + b);
+        const promedioLista = sumaLista / lista.length; 
+        return promedioLista; 
+}
+const medianaGeneralCol = medianaSalarios(salariosColSorted);
+
+//Mediana Top 10% ---------------------------------
+
+const spliceStart = (salariosColSorted.length * 90) / 100;
+const spliceCount = salariosColSorted.length - spliceStart;
+
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart, 
+    spliceCount
+    )
+
+const medianaTop10Col = medianaSalarios(salariosColTop10);
+
+
+console.log({
+    medianaGeneralCol,
+    medianaTop10Col,
+})
